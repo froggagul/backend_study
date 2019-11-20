@@ -3,7 +3,7 @@ var router = express.Router();
 import eat from '../controller/eat';
 
 router.get('/', function(req, res, next) {
-  res.send({"to":eat(req.query.date, req.query.time)});
+  res.send(eat(req.query.date, req.query.time));
 });
 
 export default router;
